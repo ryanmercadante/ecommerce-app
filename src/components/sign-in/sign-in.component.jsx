@@ -19,7 +19,6 @@ class SignIn extends Component {
 
   handleSubmit = e => {
     e.preventDefault()
-
     this.setState({ email: '', password: '' })
   }
 
@@ -36,8 +35,22 @@ class SignIn extends Component {
         <span>Sign in with your email and password</span>
 
         <form onSubmit={this.handleSubmit}>
-          <FormInput name='email' type='email' label='email' value={email} handleChange={this.handleChange} required />
-          <FormInput name='password' type='password' label='password' value={password} handleChange={this.handleChange} required />
+          <FormInput
+            name='email'
+            type='email'
+            label='email'
+            value={email}
+            handleChange={this.handleChange}
+            required
+          />
+          <FormInput
+            name='password'
+            type='password'
+            label='password'
+            value={password}
+            handleChange={this.handleChange}
+            required
+          />
 
           <div className='buttons'>
             <CustomButton type='submit'>Sign In</CustomButton>
